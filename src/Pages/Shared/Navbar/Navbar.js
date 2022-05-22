@@ -4,7 +4,7 @@ import image from "./logo-1.png"
 
 const Navbar = () => {
     return (
-        <div className="navbar">
+        <div className="navbar hero-overlay bg-opacity-60 px-12 py-6 text-white">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -19,18 +19,21 @@ const Navbar = () => {
         
       </ul>
     </div>
-    <img className='bg-black w-48' src={image} alt="logo website" />
+    <img className='w-48' src={image} alt="logo website" />
   </div>
-  <div className="navbar-center hidden lg:flex">
+        <div className="navbar-end hidden lg:flex">
+          
     <ul className="menu menu-horizontal  p-0">
         <li><Link to="/">Home</Link></li>
         <li><Link to="about">About</Link></li>
         <li><Link to="reviews">Reviews</Link></li>
         <li><Link to="contact">Contact Us</Link></li>
         <li><Link to="login">Login</Link></li>
+        
     </ul>
-  </div>
-</div>
+        </div>
+      </div>
+      
     );
 };
 

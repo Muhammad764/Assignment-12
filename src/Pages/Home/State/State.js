@@ -2,7 +2,7 @@ import React from 'react';
 
 const State = () => {
     return (
-        <div className="stats py-24 px-24">
+        <div className="stats pt-24 pb-12 px-24">
   
   <div className="stat">
     <div className="stat-figure text-primary">

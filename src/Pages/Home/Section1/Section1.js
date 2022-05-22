@@ -10,7 +10,7 @@ const Section1 = () => {
           <div className='px-8'>
            <h1 className="text-5xl font-bold">Our Capabilities</h1>
             <p className="py-6">You’ve been inspired–now it’s time to make it happen. Transform your ideas into reality with Manufacturer Leather’s manufacturing capabilities. With over four decades of experience in leather craftsmanship and manufacturing</p>
-            <button className="btn btn-primary">Learn More</button>
+            <button className="btn btn-primary text-white">Learn More</button>
            </div>
           </div>
          </div>
