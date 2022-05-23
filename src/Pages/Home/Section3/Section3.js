@@ -6,7 +6,7 @@ const Section3 = () => {
     return (
         <div>
         <div className="hero py-8" style={{backgroundImage: `url(${banner1})`}}>
-         <div className="hero-overlay bg-opacity-60"></div>
+         <div className="hero-overlay bg-opacity-90"></div>
          <div className="hero-content text-center text-neutral-content">
          <div className="flex justify-between gap-x-64 py-10">
           <h1 className="mb-5 text-5xl font-bold text-primary">CALL US ON +44 (0) 7788 778 78</h1>

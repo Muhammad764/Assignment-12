@@ -4,7 +4,7 @@ import image from "./logo-1.png"
 
 const Navbar = () => {
     return (
-        <div className="navbar hero-overlay bg-opacity-60 px-12 py-6 text-white">
+        <div className="navbar bg-neutral text-neutral-content  px-12 py-5">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex="0" className="btn btn-ghost lg:hidden">

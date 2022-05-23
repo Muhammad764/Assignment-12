@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer>
             <hr className='bg-black'  />
-        <div className="footer pl-24 p-10">
+        <div className="footer pl-16 p-10">
             <div >
     <span className="footer-title">Services</span> 
     <a className="link link-hover">Branding</a>
@@ -33,7 +33,7 @@ const Footer = () => {
         <span className="label-text">Enter your email address</span>
       </label> 
       <div className="relative">
-        <input type="text" placeholder="username@site.com" class="input input-bordered w-full pr-16" /> 
+        <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" /> 
         <button className="btn btn-primary absolute top-0 right-0 rounded-l-none text-white">Subscribe</button>
       </div>
     </div>

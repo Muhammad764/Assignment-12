@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "image": "./images/items 2.jpg",
+    "name": "Lather prototype development",
+    "description": "We can help design your product in your way",
+    "price": "$2000",
+    "minimumOrderQuantity": "",
+    "availableQuantity": ""
+  },
+  {
+    "id": 2,
+    "image": "./images/items 4.jpg",
+    "name": "Custom case manufacturing",
+    "description": "Synthetic or leather, Manufacturer Textiles has the experience",
+    "price": "$2000",
+    "minimumOrderQuantity": "",
+    "availableQuantity": ""
+  },
+  {
+    "id": 3,
+    "image": "./images/items 5.jpg",
+    "name": "Contract cutting and sewing",
+    "description": "No project is too small, nor too large.",
+    "price": "$1200",
+    "minimumOrderQuantity": "",
+    "availableQuantity": ""
+  },
+  {
+    "id": 4,
+    "image": "./images/site 5.jpeg",
+    "name": "Private label production",
+    "description": "Leaders of industry trust Manufacturer Textiles ",
+    "price": "$2500",
+    "minimumOrderQuantity": "",
+    "availableQuantity": ""
+  },
+  {
+    "id": 5,
+    "image": "./images/site 2.jpeg",
+    "name": "Corporate Accessories",
+    "description": "Use quality leather gifts to elevate your brand.",
+    "price": "$2000",
+    "minimumOrderQuantity": "",
+    "availableQuantity": ""
+  },
+  {
+    "id": 6,
+    "image": "./images/site 3.jpeg",
+    "name": "Leather belt manufacturer",
+    "description": "We specialize in handcrafting the finest belts in the USA.",
+    "price": "$2100",
+    "minimumOrderQuantity": "",
+    "availableQuantity": ""
+  }
+]

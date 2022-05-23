@@ -7,7 +7,7 @@ import img5 from './imag/pic5.jpg'
 
 const Section4 = () => {
     return (
-        <div className='flex px-8 pt-16 pb-20 gap-x-4'>
+        <div className='flex px-8 pt-20 pb-20 gap-x-4'>
             <div><img className='shadow-lg' src={img1} alt="brand" /></div>
             <div><img className='shadow-lg' src={img2} alt="brand" /></div>
             <div><img className='shadow-lg' src={img3} alt="brand" /></div>

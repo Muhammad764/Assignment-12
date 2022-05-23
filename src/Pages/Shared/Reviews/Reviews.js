@@ -38,7 +38,7 @@ export default class Reviews extends Component {
       ]
     };
 return (
-      <div className="px-16 py-8">
+      <div className="px-16 py-12">
         <Slider {...settings}>
             <div className="pt-4 px-4">
                 <div className="avatar ">
