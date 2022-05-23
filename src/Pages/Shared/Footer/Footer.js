@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer>
             <hr className='bg-black'  />
-        <div className="footer pl-16 p-10">
+        <div className="footer  p-10">
             <div >
     <span className="footer-title">Services</span> 
     <a className="link link-hover">Branding</a>
@@ -39,7 +39,7 @@ const Footer = () => {
     </div>
   </div>              
         </div>
-            <div className="footer p-4 bg-neutral text-neutral-content">
+            <div className="footer p-4 bg-neutral text-neutral-content px-10">
                <div className="items-center grid-flow-col">
    <img className='w-48' src={logo} alt="logo" /> 
     <p className='text-center px-72'>Copyright © 2022 - All right reserved</p>

@@ -9,6 +9,8 @@ import Login from './Pages/Home/Login/Login';
 import Reviews from './Pages/Shared/Reviews/Reviews';
 import Contact from './Pages/Home/Contact/Contact';
 import Footer from './Pages/Shared/Footer/Footer';
+import ServiceDetail from './Pages/Services/ServiceDetail';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -16,10 +18,12 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="reviews" element={<Reviews />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="login" element={<Login />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/service/:serviceId" element={<ServiceDetail />} />
+        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
       <Footer></Footer>
     </div>
