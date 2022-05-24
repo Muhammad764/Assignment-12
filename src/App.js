@@ -11,6 +11,8 @@ import Contact from './Pages/Home/Contact/Contact';
 import Footer from './Pages/Shared/Footer/Footer';
 import ServiceDetail from './Pages/Services/ServiceDetail';
 import NotFound from './Pages/NotFound/NotFound';
+import Signup from './Pages/Home/Login/Signup';
+import RequireAuth from './Pages/Home/Login/RequireAuth';
 
 function App() {
   return (
@@ -19,10 +21,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/service/:serviceId" element={<ServiceDetail />} />
+        <Route path="/service/:serviceId" element={<RequireAuth>
+          <ServiceDetail></ServiceDetail>
+        </RequireAuth>} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup/>} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
       <Footer></Footer>
