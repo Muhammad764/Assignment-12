@@ -13,7 +13,7 @@ const Navbar = () => {
 };
 
     return (
-        <div className="navbar bg-secondary text-white  px-12 py-5">
+        <div className="navbar bg-secondary text-white  px-12 py-4 sticky top-0 z-50">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -24,21 +24,26 @@ const Navbar = () => {
         <li><Link to="about">About</Link></li>
         <li><Link to="reviews">Reviews</Link></li>
         <li><Link to="contact">Contact Us</Link></li>
+        {
+            user && <li><Link to="/dashboard">Dashboard</Link></li>
+        }
         <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
         
       </ul>
     </div>
-    <div href="/">
+    <Link to="/">
        <img  className='w-48 ' src={image} alt="logo website" />     
-    </div>
+    </Link>
   </div>
         <div className="navbar-end hidden lg:flex">
           
     <ul className="menu menu-horizontal  p-0">
-        <li><Link to="/">Home</Link></li>
+        
         <li><Link to="about">About</Link></li>
-        <li><Link to="reviews">Reviews</Link></li>
-        <li><Link to="contact">Contact Us</Link></li>
+        <li><Link to="contact">Contact us</Link></li>
+        {
+            user && <li><Link to="/dashboard">Dashboard</Link></li>
+        }
        <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
         
     </ul>

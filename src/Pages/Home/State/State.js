@@ -2,7 +2,7 @@ import React from 'react';
 
 const State = () => {
     return (
-        <div className="stats px-16 lg:px-28 lg:pb-24 stats-vertical lg:stats-horizontal ">
+        <div className="stats px-16 lg:px-24 lg:pb-24 stats-vertical lg:stats-horizontal ">
   
         <div className="stat">
           <div className="stat-figure text-secondary">

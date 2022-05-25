@@ -13,6 +13,11 @@ import ServiceDetail from './Pages/Services/ServiceDetail';
 import NotFound from './Pages/NotFound/NotFound';
 import Signup from './Pages/Home/Login/Signup';
 import RequireAuth from './Pages/Home/Login/RequireAuth';
+import { ToastContainer } from 'react-toastify';
+import Dashboard from './Pages/DashBoard/Dashboard';
+import MyOrders from './Pages/DashBoard/MyOrders';
+import AddReview from './Pages/DashBoard/AddReview';
+import MyProfile from './Pages/DashBoard/MyProfile';
 
 function App() {
   return (
@@ -24,6 +29,13 @@ function App() {
         <Route path="/service/:serviceId" element={<RequireAuth>
           <ServiceDetail></ServiceDetail>
         </RequireAuth>} />
+        <Route path="/dashboard" element={<RequireAuth>
+          <Dashboard></Dashboard>
+        </RequireAuth>}>
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path='add' element={<AddReview></AddReview>}></Route>
+          <Route path='profile' element={<MyProfile></MyProfile>}></Route>
+        </Route>
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
@@ -31,6 +43,8 @@ function App() {
         <Route path="*" element={<NotFound/>} />
       </Routes>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
+      
     </div>
   );
 }
