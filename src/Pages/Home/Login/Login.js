@@ -61,7 +61,7 @@ const Login = () => {
                                  {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
                    </label>
                         </div>
-                        <div className="form-control w-full max-w-xs">
+            <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>

@@ -39,14 +39,18 @@ const Navbar = () => {
           
     <ul className="menu menu-horizontal  p-0">
         
-        <li><Link to="about">About</Link></li>
-        <li><Link to="contact">Contact us</Link></li>
         {
-            user && <li><Link to="/dashboard">Dashboard</Link></li>
+          user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
+       <li><Link to="about">About</Link></li>
        <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
         
     </ul>
+        </div>
+        <div className="nav-end">
+      <label tabIndex="1" for="dashboard-sidebar" className="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </label>
         </div>
       </div>
       
