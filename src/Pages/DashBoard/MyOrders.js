@@ -51,7 +51,6 @@ const MyOrders = () => {
     }, [user])
     return (
         <div>
-            {/* <h2 className='text-5xl'>orders{order.length}</h2> */}
             <div className="overflow-x-auto">
   <table className="table w-full">
    
@@ -65,10 +64,10 @@ const MyOrders = () => {
       </tr>
     </thead>
     <tbody>
-      {
-                            orders.map((order, index) => <tr
-                            key={order._id}
-                            >
+            {
+             orders.map((order, index) => <tr
+             key={order._id}
+             >
            <th>{index + 1}</th>
            <td>{order.name}</td>
         <td>{order.email}</td>

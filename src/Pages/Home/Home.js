@@ -1,5 +1,6 @@
 import React from 'react';
 import Services from '../Services/Services';
+import Rev from '../Shared/Reviews/Rev';
 import Reviews from '../Shared/Reviews/Reviews';
 import Banner from './Banner/Banner';
 import Section1 from './Section1/Section1';
@@ -17,7 +18,8 @@ const Home = () => {
             <Section1></Section1>
             <Section2></Section2>
             <Section3></Section3>
-            <Reviews></Reviews>
+            <Rev></Rev>
+            {/* <Reviews></Reviews> */}
             <Section4></Section4>
         
         </div>

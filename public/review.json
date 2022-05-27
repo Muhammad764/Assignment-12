@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "image": "./images/items 1.jpg",
+    "name": "Hunter Harper",
+    "ratting": "",
+    "description": "Ordered a sheepskin stool on 16/3 and delivered on 17/3. Great service and item is very good quality. Really really pleased. Thank you very much."
+  },
+  {
+    "id": 2,
+    "image": "./images/items 2.jpg",
+    "name": "Marks Hatfield",
+    "ratting": "",
+    "description": "I was very pleased with the cross-over leather handbag I ordered. The quality was excellent and the color was perfect, exactly what I wanted. Prompt service and a great product."
+  },
+  {
+    "id": 3,
+    "image": "./images/items 3.jpg",
+    "name": "Rosella Cooper",
+    "ratting": "",
+    "description": "Absolutely amazing !Super fast delivery and beautiful products - can see them lasting for years and years and these are certainly investment pieces."
+  },
+  {
+    "id": 4,
+    "image": "./images/items 4.jpg",
+    "name": "Krystal Goodwin",
+    "ratting": "",
+    "description": "Super fast delivery and beautiful products - can see them lasting for years and years and these are certainly investment pieces.100% would recommend and will be coming back for more"
+  },
+  {
+    "id": 5,
+    "image": "./images/items 5.jpg",
+    "name": "Elizabeth Molina",
+    "ratting": "",
+    "description": "Ordered a sheepskin stool on 16/3 and delivered on 17/3. Great service and item is very good quality. Really really pleased. Thank you very much."
+  },
+  {
+    "id": 6,
+    "image": "./images/items 6.jpg",
+    "name": "Wiley Lindsey",
+    "ratting": "",
+    "description": "Ordered sheepskin leather aviator Good confirmation arrived free postage within 2 days.Quality looks fab.he only think I would suggest to purchasers is order a size bigger on a standard fit."
+  }
+]
