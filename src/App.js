@@ -23,8 +23,6 @@ import AddAProduct from './Pages/DashBoard/AddAProduct';
 import ManageProduct from './Pages/DashBoard/ManageProduct';
 import Users from './Pages/DashBoard/Users';
 import RequireAdmin from './Pages/Home/Login/RequireAdmin';
-import SeeReviews from './Pages/Shared/Reviews/SeeReviews';
-import Rev from './Pages/Shared/Reviews/Rev';
 
 function App() {
   return (
@@ -48,8 +46,6 @@ function App() {
           <Route path='manage' element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
         </Route>
         <Route path="/reviews" element={<Reviews />} />
-        <Route path="/set" element={<SeeReviews />} />
-        <Route path="/see" element={<Rev />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup/>} />
