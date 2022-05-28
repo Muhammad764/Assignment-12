@@ -22,9 +22,9 @@ const Navbar = () => {
       </label>
       <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-secondary rounded-box w-52">
         <li><Link to="/">Home</Link></li>
-        <li><Link to="about">About</Link></li>
-        <li><Link to="reviews">Reviews</Link></li>
-        <li><Link to="contact">Contact Us</Link></li>
+              <li><Link to="/blogs">Blogs</Link></li>
+              <li><Link to="/portfolio">My Portfolio</Link></li>
+        
         {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
@@ -43,7 +43,8 @@ const Navbar = () => {
         {
           user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
-       <li><Link to="about">About</Link></li>
+       <li><Link to="/blogs">Blogs</Link></li>
+       <li><Link to="/portfolio">My Portfolio</Link></li>
        <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
         
     </ul>

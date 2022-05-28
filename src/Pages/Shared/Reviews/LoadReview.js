@@ -12,7 +12,7 @@ const LoadReview = () => {
     },[])
     return (
         <div> 
-            <div className='load-review pl-6 lg:px-8 pb-16 pt-24'>
+            <div className='load-review pl-6 lg:px-8 pb-6 pt-24'>
                  {
                 reviews.map(review => <SingleReview
                     key={review._id}

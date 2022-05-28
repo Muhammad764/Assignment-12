@@ -60,7 +60,8 @@ const ServiceDetail = () => {
                     { <form onSubmit={handleSubmit} >
                     <input type="name" value={user.displayName} className="input input-bordered w-full" readOnly disabled />
                     <input type="email" value={user.email} className="input input-bordered w-full mt-3" readOnly disabled />
-                    <input type="number" name='quantity' placeholder="Quantity" className="input input-bordered w-full mt-3" required />
+                        <input type="number" name='quantity' placeholder="Quantity" className="input input-bordered w-full mt-3" required />
+                
                     <input type="text" name='address' placeholder="Address" className="input input-bordered w-full mt-3" required/>
                     <input type="number" name='phone' placeholder="Phone" className="input input-bordered w-full mt-3" required />
                     <input type="submit" name='submit' value="Place Order" className="btn btn-secondary text-white input input-bordered w-full mt-3" />
