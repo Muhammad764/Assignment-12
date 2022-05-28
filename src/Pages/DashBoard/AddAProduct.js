@@ -116,7 +116,7 @@ const AddAProduct = () => {
                             <label className="label">
                                 <span className="label-text">Product</span>
                     </label>
-                    <select {...register('product')} class="select w-full input-bordered max-w-xs">
+                    <select {...register('product')} className="select w-full input-bordered max-w-xs">
                         {
                             services.map(service => <option
                                 key={service._id}

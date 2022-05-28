@@ -9,8 +9,9 @@ const AddReview = () => {
         const url = `http://localhost:5000/review`
         fetch(url, {
             method:'POST',
-            headers: {
-                'content-type': 'application/json'
+           headers: {
+                        'content-type': 'application/json',
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
             },
             body:JSON.stringify(data)
         })

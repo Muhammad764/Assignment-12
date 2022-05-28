@@ -6,16 +6,16 @@ const LoadReview = () => {
     const [reviews, setReviews] = useState([])
     
     useEffect(() => {
-        fetch('review.json')
+        fetch('http://localhost:5000/review')
        .then(res => res.json())
       .then(data => setReviews(data))  
     },[])
     return (
         <div> 
-            <div className='load-review pl-24 pt-16'>
+            <div className='load-review pl-6 lg:px-8 pb-16 pt-24'>
                  {
                 reviews.map(review => <SingleReview
-                    key={review.id}
+                    key={review._id}
                     review ={review}
                 ></SingleReview>)
             }

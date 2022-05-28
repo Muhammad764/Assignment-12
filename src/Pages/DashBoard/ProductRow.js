@@ -8,15 +8,15 @@ const ProductRow = ({ product, index,setDeletingProduct}) => {
     return (
         <tr>
             <th>{index + 1}</th>
-            <td><div class="avatar">
-                <div class="w-8 rounded">
+            <td><div className="avatar">
+                <div className="w-8 rounded">
                     <img src={img} alt={name} />
                 </div>
             </div></td>
             <td>{name}</td>
             <td>{email}</td>
             <td>
-                <label onClick={() => setDeletingProduct(product)} for="delete-confirm-modal" class="btn btn-sm btn-outline btn-error"><TrashIcon className='w-6 py-1'></TrashIcon></label>
+                <label onClick={() => setDeletingProduct(product)} for="delete-confirm-modal" className="btn btn-sm btn-outline btn-error"><TrashIcon className='w-6 py-1'></TrashIcon></label>
             </td>
         </tr>
     );

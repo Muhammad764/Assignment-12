@@ -1,7 +1,6 @@
 import React from 'react';
 import Services from '../Services/Services';
 import LoadReview from '../Shared/Reviews/LoadReview';
-import Reviews from '../Shared/Reviews/Reviews';
 import Banner from './Banner/Banner';
 import Section1 from './Section1/Section1';
 import Section2 from './Section2/Section2';
@@ -19,7 +18,6 @@ const Home = () => {
             <Section2></Section2>
             <Section3></Section3>
             <LoadReview></LoadReview>
-            <Reviews></Reviews>
             <Section4></Section4>
         
         </div>
