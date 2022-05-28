@@ -6,7 +6,7 @@ const Modal = ({ deletingProduct,refetch,setDeletingProduct }) => {
     const { name, email } = deletingProduct;
     
     const handelDelete = email => {
-        fetch(`http://localhost:5000/product/${email}`, {
+        fetch(`https://agile-retreat-61796.herokuapp.com/product/${email}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

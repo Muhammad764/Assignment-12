@@ -13,7 +13,7 @@ const MyOrders = () => {
         const handelDelete = id => {
         const proceed = window.confirm('Are You Sure?')
         if(proceed){
-            const url = `http://localhost:5000/order/${id}`;
+            const url = `https://agile-retreat-61796.herokuapp.com/order/${id}`;
             fetch(url, {
                 method:'DELETE'
             })
@@ -28,7 +28,7 @@ const MyOrders = () => {
       
      useEffect(() => {
        if (user) {
-            fetch(`http://localhost:5000/order?email=${user.email}`, {
+            fetch(`https://agile-retreat-61796.herokuapp.com/order?email=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -44,7 +44,7 @@ const MyOrders = () => {
                     return res.json()
                 })
                 .then(data => {
-
+                    
                     setOrder(data);
                 });
         }

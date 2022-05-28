@@ -7,11 +7,34 @@ import Loading from '../Shared/Loading/Loading';
 const MyProfile = () => {
     const { register, formState: { errors }, handleSubmit,reset } = useForm();
 
-    const { data: profile, isLoading } = useQuery('profile', () => fetch('http://localhost:5000/profile').then(res => res.json()))
+    const { data: profile, isLoading } = useQuery('profile', () => fetch('https://agile-retreat-61796.herokuapp.com/service').then(res => res.json()))
+
+    const imageStorageKey='558efe71218c8071ccf57782d573ccc7';
     
      const onSubmit = async data => {
-         console.log('data', data);
-          fetch('http://localhost:5000/profile', {
+        const image = data.image[0];
+        const formData = new FormData();
+        formData.append('image', image);
+        const url = `https://api.imgbb.com/1/upload?key=${imageStorageKey}`;
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+        .then(res=>res.json())
+        .then(result =>{
+            if(result.success){
+                const img = result.data.url;
+                const profile = {
+                    name: data.name,
+                    email: data.email,
+                    education: data.education,
+                    location: data.location,
+                    phone:data.number,
+                    profile: data.profile,
+                    img: img
+                }
+            
+                fetch('https://agile-retreat-61796.herokuapp.com/profile', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',
@@ -30,6 +53,9 @@ const MyProfile = () => {
                     }
                 })
 
+            }
+            
+        })
     }
 
     if (isLoading) {
@@ -79,13 +105,21 @@ const MyProfile = () => {
                             <label className="label">
                                 <span className="label-text">Education</span>
                             </label>
-                            <textarea
-                                type="field"
-                                placeholder="Add product details"
+                            <input
+                                type="text"
+                                placeholder="Education"
                                 className="input input-bordered w-full max-w-xs"
- 
+                                {...register("education", {
+                                    required: {
+                                        value: true,
+                                        message: 'education is Required'
+                                    }
+                                })}
                             />
-                        </div>           
+                            <label className="label">
+                                {errors.education?.type === 'required' && <span className="label-text-alt text-red-500">{errors.education.message}</span>}
+                            </label>
+                </div>           
 
                 
                 <div className="form-control w-full max-w-xs">
@@ -94,32 +128,75 @@ const MyProfile = () => {
                             </label>
                             <input
                                 type="text"
-                                placeholder="Enter Your Loaction"
+                                placeholder="Your Location"
                                 className="input input-bordered w-full max-w-xs"
- 
+                                {...register("location", {
+                                    required: {
+                                        value: true,
+                                        message: 'Name is Required'
+                                    }
+                                })}
                             />
-                        </div>
+                            <label className="label">
+                                {errors.location?.type === 'required' && <span className="label-text-alt text-red-500">{errors.location.message}</span>}
+                            </label>
+                </div>
                 <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Phone</span>
                             </label>
                             <input
                                 type="number"
-                                placeholder="Enter Your Number"
+                                placeholder="Your Name"
                                 className="input input-bordered w-full max-w-xs"
- 
+                                {...register("phone", {
+                                    required: {
+                                        value: true,
+                                        message: 'number is Required'
+                                    }
+                                })}
                             />
-                        </div>
+                            <label className="label">
+                                {errors.phone?.type === 'required' && <span className="label-text-alt text-red-500">{errors.phone.message}</span>}
+                            </label>
+                </div>
                <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">Linkedin Profile</span>
+                                <span className="label-text">Linkedin</span>
                             </label>
                             <input
-                                type="url"
-                                placeholder="Enter Your Linkedin Profile"
+                                type="link"
+                                placeholder="Your profile"
                                 className="input input-bordered w-full max-w-xs"
- 
+                                {...register("profile", {
+                                    required: {
+                                        value: true,
+                                        message: 'profile is Required'
+                                    }
+                                })}
                             />
+                            <label className="label">
+                                {errors.profile?.type === 'required' && <span className="label-text-alt text-red-500">{errors.profile.message}</span>}
+                            </label>
+                </div>
+                 <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Image</span>
+                            </label>
+                            <input
+                                type="file"
+                                
+                                className="input input-bordered w-full max-w-xs"
+                                {...register("image", {
+                                    required: {
+                                        value: true,
+                                        message: 'Image is Required'
+                                    }
+                                })}
+                            />
+                            <label className="label">
+                                {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.image.message}</span>}
+                            </label>
                         </div>
                 <input className='btn w-full mt-4 btn-secondary max-w-xs text-white' type="submit" value="Add Product" />
                     </form> 

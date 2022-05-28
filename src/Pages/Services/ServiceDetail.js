@@ -22,7 +22,7 @@ const ServiceDetail = () => {
             phone: event.target.phone.value,
         }
 
-        axios.post('http://localhost:5000/order', order)
+        axios.post('https://agile-retreat-61796.herokuapp.com/order', order)
             .then(response => {
                 const { data } = response
                 if (data.insertedId) {
@@ -33,7 +33,7 @@ const ServiceDetail = () => {
     }
 
     useEffect(() => {
-        const url = `http://localhost:5000/service/${serviceId}`
+        const url = `https://agile-retreat-61796.herokuapp.com/service/${serviceId}`
         fetch(url)
         .then(res => res.json())
         .then(data => setService(data))

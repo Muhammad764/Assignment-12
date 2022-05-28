@@ -1,9 +1,13 @@
-# Getting Started with Create React App
+# A Full-Stack Leather Manufacturer Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [https://leather-manufacturer.web.app/](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
+## Leather-Manufacture
+* A Full-Stack website
+* Implement login system 
+* In Backend use mongodb and node 
+* You can order and review the website
+* A unique design for using tailwind and react 
 In the project directory, you can run:
 
 ### `npm start`

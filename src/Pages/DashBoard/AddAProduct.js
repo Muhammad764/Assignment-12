@@ -7,7 +7,7 @@ import Loading from '../Shared/Loading/Loading';
 const AddAProduct = () => {
     const { register, formState: { errors }, handleSubmit,reset } = useForm();
     
-    const { data: services, isLoading } = useQuery('services', () => fetch('http://localhost:5000/service').then(res => res.json()))
+    const { data: services, isLoading } = useQuery('services', () => fetch('https://agile-retreat-61796.herokuapp.com/service').then(res => res.json()))
 
     const imageStorageKey='558efe71218c8071ccf57782d573ccc7';
 
@@ -31,7 +31,7 @@ const AddAProduct = () => {
                     img: img
                 }
             
-                fetch('http://localhost:5000/product', {
+                fetch('https://agile-retreat-61796.herokuapp.com/product', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',
@@ -142,7 +142,7 @@ const AddAProduct = () => {
                                 })}
                             />
                             <label className="label">
-                                {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+                                {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.image.message}</span>}
                             </label>
                         </div>
                 <input className='btn w-full btn-secondary max-w-xs text-white' type="submit" value="Add Product" />
