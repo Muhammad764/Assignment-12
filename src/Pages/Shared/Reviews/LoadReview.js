@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import SingleReview from './SingleReview';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
-
 import './LoadReview.css'
+import Slider from 'react-slick/lib/slider';
+
 
 const LoadReview = () => {
     const [reviews, setReviews] = useState([])
@@ -17,31 +11,57 @@ const LoadReview = () => {
         fetch('https://agile-retreat-61796.herokuapp.com/review')
        .then(res => res.json())
       .then(data => setReviews(data))  
-    },[])
+    }, [])
+    
+     const settings = {
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+        initialSlide: 0,
+         autoplay: true,
+      autoplaySpeed: 1000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
     return (
         <div> 
-            
-            <Swiper
-                modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={20}
-                slidesPerView={3}
-                pagination={{ clickable: true }}
-                scrollbar={{draggable:true}}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-       <SwiperSlide>
-            <div className='load-review pl-6 lg:px-8 pb-6 pt-24'>
-                 {
+            <div className='m-10'>
+                <Slider  {...settings}>
+                {
                 reviews.map(review => <SingleReview
                     key={review._id}
                     review ={review}
                 ></SingleReview>)
-            }
+                }
+                </Slider>
             </div>
-        </SwiperSlide>
-    </Swiper>
-        </div>
+       </div>
     );
 };
 

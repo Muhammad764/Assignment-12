@@ -1,6 +1,6 @@
 # A Full-Stack Leather Manufacturer Website
 
-This project was bootstrapped with [https://leather-manufacturer.web.app/](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [https://leather-manufacturer.web.app/](https://leather-manufacturer.web.app/).
 
 ## Leather-Manufacture
 * A Full-Stack website

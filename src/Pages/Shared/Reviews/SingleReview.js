@@ -1,13 +1,11 @@
 import React from 'react';
 
 
-
-
 const SingleReview = ({ review }) => {
     const {name,image,description} = review
     return (
         <div>
-            <div className="card w-80 lg:w-96 h-80 bg-base-100 shadow-lg  mt-5">
+            <div className="card bg-base-100  mt-5">
   <div className="avatar pl-24 lg:pl-36  pt-4 lg:px-16">
   <div className="w-24  rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
     <img src={image} />
