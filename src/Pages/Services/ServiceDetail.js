@@ -43,7 +43,7 @@ const ServiceDetail = () => {
       <div className='flex lg:mt-20 pb-16 px-10 gap-x-10 '>
         <div className="card w-1/2  shadow-xl">
         <figure>
-        <img src={service?.image} alt="leather component" />
+        <img src={service.image} alt="leather component" />
         </figure>
        
     <div className="card-body items-center text-center">

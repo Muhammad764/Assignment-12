@@ -46,7 +46,7 @@ const Signup = () => {
       <div className='flex  min-h-screen justify-center items-center py-6 bg-secondary'>
             <div className="card w-96 bg-base-100 shadow-xl ">
                <div className="card-body">
-                <h2 className="text-center text-2xl font-bold">SignUp</h2>
+                <h2 className="text-center text-2xl font-bold">Register</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                      <div className="form-control w-full max-w-xs">
                             <label className="label">
