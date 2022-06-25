@@ -40,8 +40,8 @@ const ServiceDetail = () => {
     }, [serviceId])
     
     return (
-      <div className='flex lg:mt-20 pb-16 px-10 gap-x-10 '>
-        <div className="card w-1/2  shadow-xl">
+      <div className='lg:flex mt-20 pb-16 lg:px-10 lg:gap-x-10 '>
+        <div className="card lg:w-1/2  lg:shadow-xl">
         <figure>
         <img src={service.image} alt="leather component" />
         </figure>
@@ -54,7 +54,10 @@ const ServiceDetail = () => {
             <p className='text-lg font-medium'>Available Quantity: {service.availableQuantity}</p>
          </div>
             </div>
-        <div className="card w-1/2  shadow-xl">
+            
+                <hr className='border-dashed border-2 mx-4'/>
+            
+        <div className="card lg:w-1/2 lg:shadow-xl">
                 <div className="card-body items-center text-center">
                     <h2 className='text-secondary text-3xl font-bold pb-5'>Book Your Order</h2>
                     { <form onSubmit={handleSubmit} >

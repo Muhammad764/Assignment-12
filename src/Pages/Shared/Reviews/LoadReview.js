@@ -51,7 +51,7 @@ const LoadReview = () => {
     };
     return (
         <div> 
-            <div className='m-10'>
+            <div className='lg:m-10'>
                 <Slider  {...settings}>
                 {
                 reviews.map(review => <SingleReview

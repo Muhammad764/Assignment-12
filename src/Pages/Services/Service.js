@@ -11,7 +11,7 @@ const Service = ({ service }) => {
     }
 
     return (
-        <div className='px-10 py-6'>
+        <div className='lg:px-10 pb-8'>
            <div className="card bg-base-100  shadow-xl">
                 <figure><img src={image}alt="Shoes" /></figure>
           <div className="card-body">

@@ -59,7 +59,7 @@ const AddAProduct = () => {
         return <Loading></Loading>
     }
     return (
-        <div className='lg:pl-80 pb-10'>
+        <div className='lg:pl-80 pl-6 pb-10'>
 
             <form onSubmit={handleSubmit(onSubmit)}>
                      <div className="form-control w-full max-w-xs">

@@ -20,8 +20,6 @@ import AddAProduct from './Pages/DashBoard/AddAProduct';
 import ManageProduct from './Pages/DashBoard/ManageProduct';
 import Users from './Pages/DashBoard/Users';
 import RequireAdmin from './Pages/Home/Login/RequireAdmin';
-import Blogs from './Pages/Blogs/Blogs';
-import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 
 function App() {
   return (
@@ -43,10 +41,7 @@ function App() {
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path='manage' element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
         </Route>
-        
         <Route path="/login" element={<Login />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/portfolio" element={<MyPortfolio />} />
         <Route path="/signup" element={<Signup/>} />
         <Route path="*" element={<NotFound/>} />
       </Routes>

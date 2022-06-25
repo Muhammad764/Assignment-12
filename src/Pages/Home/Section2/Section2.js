@@ -3,7 +3,7 @@ import {PencilIcon,GlobeAltIcon,CubeIcon} from '@heroicons/react/solid'
 
 const Section2 = () => {
     return (
-        <div className='flex ml-8 px-16 pt-8 pb-20 gap-x-5 services-container'>
+        <div className='flex ml-8 lg:px-16 pt-8 pb-20 gap-x-5 services-container'>
             <div>
             <p className='text-2xl text-primary'>Step 1</p>
             <p className='text-4xl font-semibold pt-4'><PencilIcon className='w-16'></PencilIcon> DESIGN AND DRAWINGS</p>
