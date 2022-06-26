@@ -5,7 +5,7 @@ const SingleReview = ({ review }) => {
     const {name,image,description} = review
     return (
         <div>
-            <div className="card bg-base-100  mt-10">
+            <div className="card shadow-lg bg-base-100 mx-3 mb-3 mt-10">
   <div className="avatar pl-32 lg:pl-36  pt-4 lg:px-16">
   <div className="w-24  rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
     <img src={image} alt='' />
